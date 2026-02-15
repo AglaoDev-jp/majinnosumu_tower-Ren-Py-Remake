@@ -20,7 +20,9 @@
 
 実行ファイルを逆アセンブル、逆コンパイル、リバースエンジニアリングなどを行い、内部のリソース（音源、画像、フォント、スクリプト、シナリオなど）を取り出す行為を**固く禁止**します。  
 
-※　画像、スクリプト、シナリオは、オープンソースです。詳しくは(https://github.com/AglaoDev-jp/majinnosumu_tower-Ren-Py-Remake?tab=readme-ov-file)
+※　画像、スクリプト、シナリオは、オープンソースです。詳しくは(https://github.com/AglaoDev-jp/majinnosumu_tower-Ren-Py-Remake?tab=readme-ov-file)  
+
+* 本作品はフィクションです。実在の人物・団体・名称・事件とは一切関係ありません。  
 
 ---
 
