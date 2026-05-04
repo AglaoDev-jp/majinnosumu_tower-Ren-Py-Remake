@@ -7,7 +7,8 @@ label CH_C_08_monster_bird:
     scene bright_corridor at fullscreen_bg
     with fade
     voice "audio/voice/c/08/0_19_暗い通路を.mp3"
-    narrator_arrow "暗い通路を抜け扉を開けると、目の前には予想外の光景が広がっていた。"
+    $ ctc_mode = "page"
+    narrator_arrow "暗い通路を抜け扉を開けると、目の前には予想外の光景が広がっていた。\n"
     scene rooftop at fullscreen_bg
     with fade
     voice "audio/voice/c/08/0_20_そこは屋上.mp3"
@@ -19,7 +20,8 @@ label CH_C_08_monster_bird:
     voice "audio/voice/c/08/0_23_閉塞感のあ.mp3"
     extend "閉塞感のある迷宮を彷徨ってきたため、外気を感じることができた喜びは言葉にできない。\n"
     voice "audio/voice/c/08/0_24_やっとおも.mp3"
-    extend "やっと表に出られたという安堵感が全身を包み込む。"
+    $ ctc_mode = "page"
+    extend "やっと表に出られたという安堵感が全身を包み込む。\n"
 
     scene black
     voice "audio/voice/c/08/0_25_ふと、強烈.mp3"
@@ -32,7 +34,8 @@ label CH_C_08_monster_bird:
     voice "audio/voice/c/08/0_27_目を向ける.mp3"
     extend "目を向けると、３ｍ程の巨大な怪鳥がこちらをじっと見つめているではないか。\n"
     voice "audio/voice/c/08/0_28_怪鳥はゆっ.mp3"
-    extend "怪鳥はゆっくりと翼を広げ、その鋭い目であなたを捉えた。"
+    $ ctc_mode = "page"
+    extend "怪鳥はゆっくりと翼を広げ、その鋭い目であなたを捉えた。\n"
 
     voice "audio/voice/c/08/0_29_「ほう…人.mp3"
     narrator_arrow "「ほう…人間がここまでたどり着くとは…珍しいなぁ。」\n"
@@ -46,7 +49,8 @@ label CH_C_08_monster_bird:
     voice "audio/voice/c/08/0_32_塔の魔人に.mp3"
     extend "塔の魔人に村から連れ去られ地下牢に囚われていたこと、"
     voice "audio/voice/c/08/0_33_そこからな.mp3"
-    extend "そこからなんとか脱出し、最上階まで上がってきたことを伝えた。"
+    $ ctc_mode = "page"
+    extend "そこからなんとか脱出し、最上階まで上がってきたことを伝えた。\n"
 
     scene monster_bird_2 at fullscreen_bg
     with fade
@@ -65,7 +69,8 @@ label CH_C_08_monster_bird:
     voice "audio/voice/c/08/0_39_お前も地下.mp3"
     extend "お前も地下で酷い目に遭ったようだが、ワシも奴には手を焼いていてな。"
     voice "audio/voice/c/08/0_40_いっそ、追.mp3"
-    extend "いっそ、追い払ってしまいたいんだが、やつも中々手強くてな…。」"
+    $ ctc_mode = "page"
+    extend "いっそ、追い払ってしまいたいんだが、やつも中々手強くてな…。」\n"
 
     scene monster_bird_3 at fullscreen_bg
     with fade
@@ -74,7 +79,8 @@ label CH_C_08_monster_bird:
     voice "audio/voice/c/08/0_42_「お前、地.mp3"
     extend "「お前、地下牢から脱出してここまで来たってんなら、途中で書庫に寄らなかったか？"
     voice "audio/voice/c/08/0_43_あそこには.mp3"
-    extend "あそこには、魔人を封じる魔法書があったはずだ…何て名前の本だったかなぁ？」"
+    $ ctc_mode = "page"
+    extend "あそこには、魔人を封じる魔法書があったはずだ…何て名前の本だったかなぁ？」\n"
 
     play music "audio/bgm/奇妙な話.mp3"
 
@@ -102,13 +108,14 @@ label monster_bird_q_Correct_1:
 
     play sound "audio/se/発見.mp3"
     voice "audio/voice/c/08/1_0_「ほうほう.mp3"
-    narrator_arrow "「ほうほう、見つけてたか」\n"
+    narrator_arrow "「ほうほう、見つけてたか。」\n"
     voice "audio/voice/c/08/1_1_少し首をか.mp3"
     extend "少し首をかしげてみせる。\n"
     voice "audio/voice/c/08/1_2_怪鳥は鋭い.mp3"
     extend "怪鳥は鋭い目であなたを見つめながら問いかけた。\n"
     voice "audio/voice/c/08/1_3_「じゃあお.mp3"
-    extend "「じゃあお前、その魔法書を開いたか？何が書かれてあった？」"
+    $ ctc_mode = "page"
+    extend "「じゃあお前、その魔法書を開いたか？何が書かれてあった？」\n"
 
     voice "audio/voice/c/08/1_3_魔法書には.mp3"
     $ choice_comment = "魔法書には何が書かれていた？" 
@@ -139,9 +146,10 @@ label monster_bird_q_Correct_2:
     voice "audio/voice/c/08/1_1_怪鳥は少し.mp3"
     extend "怪鳥は少し考えるように目を閉じ、そしてふと何かを思い出したように目を開いた。\n"
     voice "audio/voice/c/08/1_6_「そういえ.mp3"
-    extend "「そういえば、お前がこの塔を上ってくる途中で、石像を見ただろう？」\n"
+    extend "「そういえば、お前がこの塔を上ってくる途中で、石像を見ただろう？\n"
     voice "audio/voice/c/08/1_7_「その石像.mp3"
-    extend "「その石像、何か話しかけてこなかったか？」"
+    $ ctc_mode = "page"
+    extend "その石像、何か話しかけてこなかったか？」\n"
 
     voice "audio/voice/c/08/1_8_石像に、good.mp3"
     $ choice_comment = "石像に、何と話しかけられた？" 
@@ -175,7 +183,8 @@ label monster_bird_q_Incorrect_1:
     voice "audio/voice/c/08/1_2_怪鳥は鋭い.mp3"
     extend "怪鳥は鋭い目であなたを見つめながら問いかけた。\n"
     voice "audio/voice/c/08/1_3_「じゃあお.mp3"
-    extend "「じゃあお前、その魔法書を開いたか？何が書かれてあった？」"
+    $ ctc_mode = "page"
+    extend "「じゃあお前、その魔法書を開いたか？何が書かれてあった？」\n"
 
     voice "audio/voice/c/08/1_3_魔法書には.mp3"
     $ choice_comment = "魔法書には何が書かれていた？" 
@@ -205,9 +214,10 @@ label monster_bird_q_Incorrect_2:
     voice "audio/voice/c/08/1_1_怪鳥は少し.mp3"
     extend "怪鳥は少し考えるように目を閉じ、そしてふと何かを思い出したように目を開いた。\n"
     voice "audio/voice/c/08/1_6_「そういえ.mp3"
-    extend "「そういえば、お前がこの塔を上ってくる途中で、石像を見ただろう？」\n"
+    extend "「そういえば、お前がこの塔を上ってくる途中で、石像を見ただろう？\n"
     voice "audio/voice/c/08/1_7_「その石像.mp3"
-    extend "「その石像、何か話しかけてこなかったか？」"
+    $ ctc_mode = "page"
+    extend "その石像、何か話しかけてこなかったか？」\n"
 
     voice "audio/voice/c/08/1_9_石像に、bad.mp3"
     $ choice_comment = "石像に、何と話しかけられた？" 

@@ -20,6 +20,7 @@ label CH_A_07_Majin_Gate_end:
     voice "audio/voice/a/07e/0_4_「Zara.mp3"
     extend "「Zarath ul'nevar, kashan ma'lor veshar...」\n"
     voice "audio/voice/a/07e/0_5_心を鎮め、.mp3"
+    $ ctc_mode = "page"
     extend "心を鎮め、言葉を口にするたび、門の魔力が少しずつ弱まっていくのを感じる。\n"
 
     voice "audio/voice/a/07e/0_6_「貴様、何.mp3"
@@ -27,6 +28,7 @@ label CH_A_07_Majin_Gate_end:
     voice "audio/voice/a/07e/0_7_魔人の偶像.mp3"
     extend "魔人の偶像が叫び、怒りに震える。\n"
     voice "audio/voice/a/07e/0_8_しかし、あ.mp3"
+
     extend "しかし、あなたは動じることなく、呪文を続ける。\n"
 
     play sound "audio/se/オーラ1.mp3"
@@ -38,7 +40,8 @@ label CH_A_07_Majin_Gate_end:
     voice "audio/voice/a/07e/0_11_魔力が弱ま.mp3"
     extend "魔力が弱まったのを見計らい、あなたは剣を高く掲げる。\n"
     voice "audio/voice/a/07e/0_12_「それは勇.mp3"
-    extend "「それは勇者の剣！ま、待て！やめろ！」"
+    $ ctc_mode = "page"
+    extend "「それは勇者の剣！ま、待て！やめろ！」\n"
 
     voice "audio/voice/a/07e/0_13_その鋒から.mp3"
     narrator_arrow "その鋒から光が溢れ出し、門に向けて放たれる。\n"
@@ -50,6 +53,7 @@ label CH_A_07_Majin_Gate_end:
     voice "audio/voice/a/07e/0_15_「ぐあああ.mp3"
     extend "「ぐああああっ！」\n"
     voice "audio/voice/a/07e/0_16_魔人の偶像.mp3"
+    $ ctc_mode = "page"
     extend "魔人の偶像は断末魔の叫び声を上げ、次第に消え去っていった。\n"
 
     play music "audio/se/風が吹く1.mp3" fadein 1.5
@@ -62,7 +66,8 @@ label CH_A_07_Majin_Gate_end:
     voice "audio/voice/a/07e/0_19_門を出たあ.mp3"
     extend "門を出たあなたの前に、一人の戦士の霊がふわりと現れた。\n"
     voice "audio/voice/a/07e/0_20_穏やかな表.mp3"
-    extend "穏やかな表情であなたに語りかける。"
+    $ ctc_mode = "page"
+    extend "穏やかな表情であなたに語りかける。\n"
 
     scene ghosts_3 at fullscreen_bg
     with fade
@@ -79,7 +84,8 @@ label CH_A_07_Majin_Gate_end:
     voice "audio/voice/a/07e/0_27_しかし今、.mp3"
     extend "しかし今、まずはこの剣をフィオリス王国へ届けることが先決だ。"
     voice "audio/voice/a/07e/0_28_我らの使命.mp3"
-    extend "我らの使命を果たすために、どうか無事に剣を届けてくれ。」"
+    $ ctc_mode = "page"
+    extend "我らの使命を果たすために、どうか無事に剣を届けてくれ。」\n"
 
     # 現在の文字表示速度を退避（演出後に元へ戻すため）
     $ _old_cps = preferences.text_cps

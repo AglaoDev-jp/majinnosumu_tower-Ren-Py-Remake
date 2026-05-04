@@ -30,26 +30,12 @@ default DEBUG_MODE = True
 # (修正)ヒストリーの表示を修正 screens.rpy の screen history()　style history_name: style history_text:のあたり
 
 # -----------------------------------------------
+# v2 追加要素
+# CH_00_effects.rpy の追加（山奥ペンションの殺意からそのまま流用）
+# Bを押すことでシェード機能（CH_00_effects.rpy）screens.rpy のヘルプに項目追加
+# CH_00_ui_transforms.rpy　の改良。ページ送り、ページめくりアイコンに対応（山奥ペンションの殺意からそのまま流用）
+# -----------------------------------------------
 
-# -------- 文末アイコン --------------------------
-# 先に CH_00_ui_transforms.rpy で作った displayable を使う前提
-# （ctc_arrow_blink / ctc_page_blink が init python で定義されている）
-
-# 通常テキスト（矢印）
-define narrator_arrow = Character(
-    None,
-    ctc=ctc_arrow_blink,
-    ctc_position="nestled-close"
-)
-
-# 章区切り（ページめくり）※未実装
-define narrator_page = Character(
-    None,
-    ctc=ctc_page_blink,
-    ctc_position="nestled-close"
-) 
-
-# --------------------------------------------------
 
 label start:
     # デバック用分岐 （デバックモードが False なら無視）
@@ -65,7 +51,8 @@ label CH_01_start_point:
     play music "audio/bgm/strange_lullaby.mp3"
     scene black
     voice "audio/voice/s/01/0_0_あなたは、.mp3"
-    narrator_arrow "あなたは、意識を取り戻した。\n" # narrator_arrow（キャラクター）を先頭に置くことで設定した専用アイコンの点滅。
+    # narrator_arrow（キャラクター）を先頭に置くことで設定した専用アイコンの点滅。
+    narrator_arrow "あなたは、意識を取り戻した。\n" 
     voice "audio/voice/s/01/0_1_あなたは目.mp3"
     extend "あなたは目隠しをされ、堅い椅子にロープでしっかりと縛られている。\n"
     voice "audio/voice/s/01/0_2_あなたの村.mp3"
@@ -77,6 +64,10 @@ label CH_01_start_point:
     voice "audio/voice/s/01/0_5_自由になっ.mp3"
     extend "自由になったあなたは、まず目隠しを外した。\n"
     voice "audio/voice/s/01/0_6_目の前には.mp3"
+    # 面倒ですが最後の行に逐一これを置いてください
+    # これを置くと矢印アイコンがページめくりのアイコンになります。
+    # CH_00_ui_transforms.rpy
+    $ ctc_mode = "page" 
     extend "目の前には薄暗い地下室が広がっていた。\n"
 
     scene solitary_cell at fullscreen_bg
@@ -87,6 +78,7 @@ label CH_01_start_point:
     voice "audio/voice/s/01/0_8_壁には古び.mp3"
     extend "壁には古びたレンガが積み重なり、湿気が漂っている。\n"
     voice "audio/voice/s/01/0_9_あなたは周.mp3"
+    $ ctc_mode = "page" 
     extend "あなたは周囲を見回し、脱出の手がかりを探し始めた。\n"
 
     show cell_door at fullscreen_bg
@@ -94,7 +86,8 @@ label CH_01_start_point:
     voice "audio/voice/s/01/0_10_あなたは重.mp3"    
     narrator_arrow "あなたは重い鉄の扉を見つけた。\n"
     voice "audio/voice/s/01/0_11_扉には鍵が.mp3"
-    extend "扉には鍵がかかっているが、鍵穴は古びており、簡単に壊せそうだった。"
+    $ ctc_mode = "page" 
+    extend "扉には鍵がかかっているが、鍵穴は古びており、簡単に壊せそうだった。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
     voice "audio/voice/s/01/0_12_さて、どう.mp3"
@@ -113,7 +106,8 @@ label CH_01_start_point:
             extend "あなたは、そのまま目覚めることはなかった。\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page" 
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
 
@@ -129,7 +123,8 @@ label CH_01_start_point:
             extend "あなたは、牢屋で息絶えた。\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page" 
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
 
@@ -144,7 +139,8 @@ label CH_01_start_point:
             voice "audio/voice/s/01/3_1_あなたは、.mp3"
             extend "あなたは、重い扉を押し開けた。\n"
             voice "audio/voice/s/01/3_2_扉の向こう.mp3"
-            extend "扉の向こうには、階段が続いていた。"
+            $ ctc_mode = "page" 
+            extend "扉の向こうには、階段が続いていた。\n"
             scene black
             with Dissolve(1.0)
 

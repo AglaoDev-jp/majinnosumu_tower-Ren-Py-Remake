@@ -19,7 +19,8 @@ label CH_A_05_armory:
     voice "audio/voice/a/05/0_4_空気はひん.mp3"
     extend "空気はひんやりとしており、古い鉄の匂いが漂っている。\n"
     voice "audio/voice/a/05/0_5_奥へと足を.mp3"
-    extend "奥へと足を進める。"
+    $ ctc_mode = "page"
+    extend "奥へと足を進める。\n"
 
     $ renpy.music.set_volume(0.6, channel="music") # 音量を下げる。
     play music "audio/bgm/ENEMY_ENCOUNTER.mp3"
@@ -33,7 +34,8 @@ label CH_A_05_armory:
     voice "audio/voice/a/05/0_9_慎重に行動.mp3"
     extend "慎重に行動しないと命を落とすことになるだろう。\n"
     voice "audio/voice/a/05/0_10_決断を下す.mp3"
-    extend "決断を下す時が来た。"
+    $ ctc_mode = "page"
+    extend "決断を下す時が来た。\n"
 
     voice "audio/voice/a/05/0_11_選択肢は三.mp3"
     $ choice_comment = "選択肢は三つ。" 
@@ -50,7 +52,8 @@ label CH_A_05_armory:
             extend "あなたは、また囚われの身となるだろう。\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
 
@@ -68,7 +71,8 @@ label CH_A_05_armory:
             scene sword_a at fullscreen_bg
             with fade
             voice "audio/voice/a/05/3_2_何かと物騒.mp3"
-            extend "何かと物騒だ。この剣は拝借していこう。"
+            $ ctc_mode = "page"
+            extend "何かと物騒だ。この剣は拝借していこう。\n"
             $ renpy.music.set_volume(1.0, channel="music") # 音量を戻す。
             scene black
             with Dissolve(1.0)
@@ -85,7 +89,8 @@ label CH_A_05_armory:
             extend "あなたは、そのまま起き上がることはなかった。\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
 

@@ -13,7 +13,8 @@ label CH_B_09_Confronting_the_devil_BAD_3:
     voice "audio/voice/b/09b3/2_1_アリアーナ.mp3"
     extend "アリアーナを守るため、この剣を手放すわけにはいかない。\n"
     voice "audio/voice/b/09b3/2_2_強い決意を.mp3"
-    extend "強い決意を胸に、魔人に立ち向かう。"
+    $ ctc_mode = "page"
+    extend "強い決意を胸に、魔人に立ち向かう。\n"
 
     scene demon_anger at fullscreen_bg
     play sound "audio/se/ゴブリンの鳴き声1.mp3"
@@ -31,7 +32,8 @@ label CH_B_09_Confronting_the_devil_BAD_3:
     voice "audio/voice/b/09b3/2_8_必死に剣を.mp3"
     extend "必死に剣を抜こうとするが、剣はまるで主人の指示を拒むように動かない。\n"
     voice "audio/voice/b/09b3/2_9_汗がひたい.mp3"
-    extend "汗が額から流れ落ち、焦りが心を蝕んでいく。"
+    $ ctc_mode = "page"
+    extend "汗が額から流れ落ち、焦りが心を蝕んでいく。\n"
 
     scene demon_laugh at fullscreen_bg
     stop music
@@ -47,7 +49,8 @@ label CH_B_09_Confronting_the_devil_BAD_3:
     voice "audio/voice/b/09b3/5_3_「これで終.mp3"
     extend "「これで終わりだ。"
     voice "audio/voice/b/09b3/5_4_勇者の剣は.mp3"
-    extend "勇者の剣は私のもの、そしてお前たちの命も私の手の中にある。」"
+    $ ctc_mode = "page"
+    extend "勇者の剣は私のもの、そしてお前たちの命も私の手の中にある。」\n"
 
     play sound "audio/se/雷魔法4.mp3"
     scene expression Solid("#000000")
@@ -58,7 +61,8 @@ label CH_B_09_Confronting_the_devil_BAD_3:
     scene demon_laugh at fullscreen_bg
     with fade
     voice "audio/voice/ゲームオーバー.mp3"
-    "ゲームオーバー"
+    $ ctc_mode = "page"
+    narrator_arrow "ゲームオーバー。\n"
 
     scene black
     with Dissolve(1.0)

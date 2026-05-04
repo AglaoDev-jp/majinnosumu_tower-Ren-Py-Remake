@@ -24,7 +24,7 @@ define gui.show_name = True
 
 ## ゲームのバージョン。
 
-define config.version = "1.0"
+define config.version = "2.0"
 
 
 ## About（バージョン情報）スクリーンに表示されるテキスト。トリプルクオートの間
@@ -38,7 +38,7 @@ define gui.about = _p("""
 ## 名。簡易名は ASCII 文字（半角英数字）のみで構成され、スペース・コロン・セミコ
 ## ロンなどを含んでは行けません。
 
-define build.name = "majinnosumu_tower_Remake_v1"
+define build.name = "majinnosumu_tower_Remake_v2"
 
 
 ## サウンドと音楽 #####################################################################
@@ -205,7 +205,7 @@ init python:
     # ------------------------------------------------------------
     build.classify("game/images/**.png", "archive")
     build.classify("game/ui/**.png", "archive")
-    # build.classify("game/**.ico", "archive")
+    # build.classify("game/**.ico", "archive") # アイコンをアーカイブ化するとアイコンが反映されない。
     # ------------------------------------------------------------
     # フォント（ttf）をアーカイブ化
     # 対象：game/fonts/NotoSansJP-Regular.ttf

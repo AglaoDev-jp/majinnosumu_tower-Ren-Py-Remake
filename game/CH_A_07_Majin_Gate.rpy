@@ -15,7 +15,8 @@ label CH_A_07_Majin_Gate:
     voice "audio/voice/a/07/0_2_門に一歩近.mp3"
     extend "門に一歩近づいた瞬間、冷たい風が吹き抜け、周囲の空気が一変する。\n"
     voice "audio/voice/a/07/0_3_突然、門の.mp3"
-    extend "突然、門の前に薄暗い霧が立ち込め、徐々に魔人の姿が浮かび上がった。"
+    $ ctc_mode = "page"
+    extend "突然、門の前に薄暗い霧が立ち込め、徐々に魔人の姿が浮かび上がった。\n"
 
     scene demon_gate at fullscreen_bg
     with fade
@@ -26,7 +27,8 @@ label CH_A_07_Majin_Gate:
     voice "audio/voice/a/07/0_6_「愚かな者.mp3"
     extend "「愚かな者よ、この門を越えることは許されぬ。」\n"
     voice "audio/voice/a/07/0_7_その言葉に.mp3"
-    extend "その言葉に圧倒されながらも、あなたは戦士たちから教わった攻略方法を思い出す。"
+    $ ctc_mode = "page"
+    extend "その言葉に圧倒されながらも、あなたは戦士たちから教わった攻略方法を思い出す。\n"
 
     voice "audio/voice/a/07/0_8_攻略方法を.mp3"
     play music "audio/bgm/奇妙な話.mp3"
@@ -52,7 +54,7 @@ label CH_A_07_Majin_Gate_loop_1:
     scene sword_a at fullscreen_bg
     play music "audio/bgm/strange_lullaby.mp3"
     voice "audio/voice/a/07/1_0_しかし、剣.mp3"
-    "しかし、剣の力は門の魔力に弾かれ、何も起こらない。\n"
+    narrator_arrow "しかし、剣の力は門の魔力に弾かれ、何も起こらない。\n"
     scene demon_gate at fullscreen_bg
     with fade
     voice "audio/voice/a/07/1_1_「愚かな者.mp3"
@@ -64,7 +66,8 @@ label CH_A_07_Majin_Gate_loop_1:
     voice "audio/voice/a/07/1_4_その瞬間、.mp3"
     extend "その瞬間、戦士たちが警告した呪文の重要性を思い出す。\n"
     voice "audio/voice/a/07/1_5_あなたは門.mp3"
-    extend "あなたは門の前に立ち尽くし、再び戦士たちの言葉を思い出すことになる。"
+    $ ctc_mode = "page"
+    extend "あなたは門の前に立ち尽くし、再び戦士たちの言葉を思い出すことになる。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
     voice "audio/voice/a/07/1_6_再び戦士た.mp3"
@@ -85,7 +88,7 @@ label CH_A_07_Majin_Gate_loop_2:
     window hide
     play music "audio/bgm/strange_lullaby.mp3"
     voice "audio/voice/a/07/2_0_戦士たちの.mp3"
-    "戦士たちの教えを無視し、別の道を探すことを選ぶ。\n"
+    narrator_arrow "戦士たちの教えを無視し、別の道を探すことを選ぶ。\n"
     voice "audio/voice/a/07/2_1_しかし、す.mp3"
     extend "しかし、すでに魔人の門の強力な魔力が周囲を封じ込め、どこにも逃げ場がない！\n"
     voice "audio/voice/a/07/2_2_「愚か者よ.mp3"
@@ -93,7 +96,8 @@ label CH_A_07_Majin_Gate_loop_2:
     voice "audio/voice/a/07/2_3_魔人は冷た.mp3"
     extend "魔人は冷たい笑みを浮かべ、その目には嘲りの光が宿っている。\n"
     voice "audio/voice/a/07/2_4_あなたは門.mp3"
-    extend "あなたは門の前に立ち尽くし、再び戦士たちの言葉を思い出すことになる。"
+    $ ctc_mode = "page"
+    extend "あなたは門の前に立ち尽くし、再び戦士たちの言葉を思い出すことになる。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
     voice "audio/voice/a/07/2_5_再び戦士た.mp3"

@@ -9,7 +9,8 @@ label CH_C_08_monster_bird_bad_end:
     voice "audio/voice/c/08e/3_6_二人の話が.mp3"
     narrator_arrow "二人の話が終わったところで、階下から重々しい足音が響いてきた。\n"
     voice "audio/voice/c/08e/2_7_魔人が戻っ.mp3"
-    extend "魔人が戻ってきたのだ。"
+    $ ctc_mode = "page"
+    extend "魔人が戻ってきたのだ。\n"
 
     scene demon_anger at fullscreen_bg
     play sound "audio/se/ゴブリンの鳴き声1.mp3"
@@ -23,9 +24,12 @@ label CH_C_08_monster_bird_bad_end:
     voice "audio/voice/c/08e/2_13_でもな、お.mp3"
     extend "でもな、お前もそろそろこの塔から出て行く頃合いだろう。」\n"
     voice "audio/voice/c/08e/2_14_魔人は苛立.mp3"
+    $ ctc_mode = "page"
     extend "魔人は苛立ちを隠しきれない。\n"
+
+
     voice "audio/voice/c/08e/2_15_「ふざける.mp3"
-    extend "「ふざけるな！ここは私の力を集めるための場所だ！お前に邪魔される筋合いはない！」\n"
+    narrator_arrow "「ふざけるな！ここは私の力を集めるための場所だ！お前に邪魔される筋合いはない！」\n"
     voice "audio/voice/c/08e/2_18_怪鳥は冷や.mp3"
     extend "怪鳥は冷ややかな笑みを浮かべ、低く答えた。\n"
     voice "audio/voice/c/08e/2_19_「お前の力.mp3"
@@ -39,7 +43,8 @@ label CH_C_08_monster_bird_bad_end:
     voice "audio/voice/c/08e/2_23_私の力はま.mp3"
     extend "私の力はまだ完全ではない。"
     voice "audio/voice/c/08e/2_24_お前ごとき.mp3"
-    extend "お前ごときに干渉される筋合いはない！」"
+    $ ctc_mode = "page"
+    extend "お前ごときに干渉される筋合いはない！」\n"
 
     scene monster_bird_2 at fullscreen_bg
     voice "audio/voice/c/08e/2_25_怪鳥は肩を.mp3"   
@@ -62,13 +67,15 @@ label CH_C_08_monster_bird_bad_end:
     extend "「愚か者め、そんな攻撃が私に効くとでも思ったか？」\n"
     play sound "audio/se/重力魔法2.mp3"
     voice "audio/voice/c/08e/3_31_魔人は冷笑.mp3"
-    extend "魔人は冷笑し、暗黒のエネルギーがその周りに渦巻き始めた。"
+    $ ctc_mode = "page"
+    extend "魔人は冷笑し、暗黒のエネルギーがその周りに渦巻き始めた。\n"
 
     scene chains_trapping_protagonist at fullscreen_bg
     play music "audio/se/締め付ける2.mp3"
     voice "audio/voice/c/08e/3_32_突然、床の.mp3"
     narrator_arrow "突然、床の下から無数の鎖が飛び出し、あなたの手足に絡みついた。"
     voice "audio/voice/c/08e/3_33_あなたは必.mp3"
+    $ ctc_mode = "page"
     extend "あなたは必死に抵抗するが、鎖はどんどんきつく締まり、身動きが取れなくなった。\n"
 
     stop music
@@ -85,7 +92,8 @@ label CH_C_08_monster_bird_bad_end:
     scene demon_laugh at fullscreen_bg
     with fade
     voice "audio/voice/ゲームオーバー.mp3"
-    "ゲームオーバー。"
+    $ ctc_mode = "page"
+    narrator_arrow "ゲームオーバー。\n"
     # タイトル画面へ
     $ renpy.full_restart()
 

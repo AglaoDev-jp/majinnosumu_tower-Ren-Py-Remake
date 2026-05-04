@@ -14,6 +14,7 @@ label CH_B_08_Majin_room:
     voice "audio/voice/b/08/0_5_部屋の奥に.mp3"
     extend "部屋の奥には、赤い絨毯が敷かれ、古びた玉座が見える。\n"
     voice "audio/voice/b/08/0_6_その光景に.mp3"
+    $ ctc_mode = "page"
     extend "その光景に不思議な感覚を覚えながらも、あなたはさらに奥へと進む。\n"
 
     scene cage_like_prison at fullscreen_bg
@@ -23,6 +24,7 @@ label CH_B_08_Majin_room:
     voice "audio/voice/b/08/0_8_鉄の柵が厳.mp3"
     extend "鉄の柵が厳重に張り巡らされ、その中に一人の女性が囚われていた。\n"
     voice "audio/voice/b/08/0_9_彼女はうつ.mp3"
+    $ ctc_mode = "page"
     extend "彼女は美しくも疲れた顔をしており、薄暗い部屋の中でその姿は、はかなげに見える。\n" # 儚げが文字化けする。
 
     scene princess_up at fullscreen_bg
@@ -40,7 +42,8 @@ label CH_B_08_Majin_room:
     voice "audio/voice/b/08/0_12_彼女の視線.mp3"
     extend "彼女の視線が、ふとあなたが持つ剣に移る。\n"
     voice "audio/voice/b/08/0_13_驚きの表情.mp3"
-    extend "驚きの表情を浮かべるが、その表情はすぐに曇る。"
+    $ ctc_mode = "page"
+    extend "驚きの表情を浮かべるが、その表情はすぐに曇る。\n"
 
     scene sword_b at fullscreen_bg
     with fade
@@ -53,7 +56,8 @@ label CH_B_08_Majin_room:
     voice "audio/voice/b/08/1_6_それでも、.mp3"
     extend "それでも、その剣を持っているということは、何かの運命かもしれません…」\n"
     voice "audio/voice/b/08/0_14_彼女は一瞬.mp3"
-    extend "彼女は一瞬考え込んだ後、再び口を開く。"
+    $ ctc_mode = "page"
+    extend "彼女は一瞬考え込んだ後、再び口を開く。\n"
 
     scene devil_room at fullscreen_bg
     with fade
@@ -64,7 +68,8 @@ label CH_B_08_Majin_room:
     voice "audio/voice/b/08/1_9_お願いです.mp3"
     extend "お願いです、助けてください…"
     voice "audio/voice/b/08/1_10_あなたがそ.mp3"
-    extend "あなたがその剣を持つならば、わたしはあなたをフィオリス王国へお連れせねばなりません。」"
+    $ ctc_mode = "page"
+    extend "あなたがその剣を持つならば、わたしはあなたをフィオリス王国へお連れせねばなりません。」\n"
 
     play music "audio/bgm/奇妙な話.mp3"
     voice "audio/voice/b/08/0_16_あなたは彼.mp3"
@@ -99,7 +104,8 @@ label CH_B_08_Majin_room_loop_1:
     voice "audio/voice/b/08/1_2_この剣は、.mp3"
     extend "この剣は、真の勇者でなければ抜くことができないのです…」\n"
     voice "audio/voice/b/08/0_8_このままで.mp3"
-    extend "このままでは助けられない。"
+    $ ctc_mode = "page"
+    extend "このままでは助けられない。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
     voice "audio/voice/b/08/0_11_あなたは再.mp3"
@@ -126,7 +132,8 @@ label CH_B_08_Majin_room_loop_2:
     voice "audio/voice/b/08/0_1_アリアーナ.mp3"
     extend "アリアーナ王女が、悲しげに口を開く。\n"
     voice "audio/voice/b/08/0_2_彼女の言葉.mp3"
-    extend "彼女の言葉に胸が痛んだあなたは、再び考え直すことにする。"
+    $ ctc_mode = "page"
+    extend "彼女の言葉に胸が痛んだあなたは、再び考え直すことにする。\n"
     voice "audio/voice/b/08/0_3_考え直そう.mp3"
     play music "audio/bgm/奇妙な話.mp3"
 
@@ -161,16 +168,18 @@ label CH_B_08_Majin_room_Clear:
     stop music
     play sound "audio/se/発見.mp3"
     voice "audio/voice/b/08/0_6_すると、ア.mp3"
-    extend "すると、アリアーナ王女が囚われている牢屋の鉄柵がゆっくりと開き始める。"
+    $ ctc_mode = "page"
+    extend "すると、アリアーナ王女が囚われている牢屋の鉄柵がゆっくりと開き始める。\n"
 
     scene princess_up at fullscreen_bg
     with fade
     voice "audio/voice/b/08/1_0_「…これで.mp3"
-    "「…これで自由に…！」\n"
+    narrator_arrow "「…これで自由に…！」\n"
     voice "audio/voice/b/08/0_8_アリアーナ.mp3"
     extend "アリアーナ王女の顔に安堵の表情が浮かぶ。\n"
     voice "audio/voice/b/08/0_9_あなたは魔.mp3"
-    extend "あなたは魔人の不在を祈りつつ、アリアーナ王女と共に次のフロアへと向かった。"
+    $ ctc_mode = "page"
+    extend "あなたは魔人の不在を祈りつつ、アリアーナ王女と共に次のフロアへと向かった。\n"
     scene black
     with Dissolve(1.0)
     jump CH_B_09_Confronting_the_devil

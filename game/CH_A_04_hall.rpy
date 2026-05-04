@@ -21,7 +21,8 @@ label CH_A_04_hall:
     voice "audio/voice/a/04/0_5_テーブルは.mp3"
     extend "テーブルは一見豪華ではあるが、食器類が散乱し、残飯が腐り果てている。\n"
     voice "audio/voice/a/04/0_6_隅々まで注.mp3"
-    extend "隅々まで注意深く見渡すと、いくつか異変を見つけることができた。"
+    $ ctc_mode = "page"
+    extend "隅々まで注意深く見渡すと、いくつか異変を見つけることができた。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
     voice "audio/voice/a/04/0_7_さて、どう.mp3"
@@ -39,7 +40,8 @@ label CH_A_04_hall:
             extend "その重さで、もうあなたは動けない！\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
 
@@ -55,7 +57,8 @@ label CH_A_04_hall:
             extend "あなたは、ショックで気絶してしまった。\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
 
@@ -68,8 +71,9 @@ label CH_A_04_hall:
 
             voice "audio/voice/a/04/3_0_タペストリ.mp3"
             narrator_arrow "タペストリーの裏に、隠し扉のスイッチを見つけた。\n"
-            voice "audio/voice/a/04/3_1_扉を抜ける.mp3"            
-            extend "扉を抜けると次のフロアへと続く。"
+            voice "audio/voice/a/04/3_1_扉を抜ける.mp3"      
+            $ ctc_mode = "page"      
+            extend "扉を抜けると次のフロアへと続く。\n"
             scene black
             with Dissolve(1.0)
 

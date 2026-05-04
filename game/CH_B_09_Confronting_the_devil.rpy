@@ -18,6 +18,7 @@ label CH_B_09_Confronting_the_devil:
     voice "audio/voice/b/09/0_13_重厚な扉を.mp3"
     extend "重厚な扉を開けようとあなたが力を込めたその時、塔の内部から冷たい風が吹き抜けた。\n"
     voice "audio/voice/b/09/2_0_「おい、待.mp3"
+    $ ctc_mode = "page"
     extend "「おい、待て。お前たち、どこへ行くつもりだ？」\n"
 
     scene demon_anger at fullscreen_bg
@@ -32,6 +33,7 @@ label CH_B_09_Confronting_the_devil:
     voice "audio/voice/b/09/0_19_魔人の声が.mp3"
     extend "魔人の声が低く響き渡り、その場の空気が一層重くなる。\n"
     voice "audio/voice/b/09/2_2_「アリアー.mp3"
+    $ ctc_mode = "page"
     extend "「アリアーナ、お前もか！私のもとから逃れられると思ったのか？」\n"
 
     scene black
@@ -54,7 +56,8 @@ label CH_B_09_Confronting_the_devil:
     voice "audio/voice/b/09/2_4_「どこでそ.mp3"
     extend "「どこでそれを手に入れた？答えろ！」\n"
     voice "audio/voice/b/09/0_30_あなたは剣.mp3"
-    extend "あなたはは剣を握りしめ、魔人に対して構えをとるが、魔人は冷笑を浮かべた。"
+    $ ctc_mode = "page"
+    extend "あなたはは剣を握りしめ、魔人に対して構えをとるが、魔人は冷笑を浮かべた。\n"
 
     scene demon_laugh at fullscreen_bg
     with fade
@@ -68,7 +71,8 @@ label CH_B_09_Confronting_the_devil:
     scene black
     with fade
     voice "audio/voice/b/09/0_34_魔人は一歩.mp3"
-    extend "魔人は一歩前に踏み出し、挑発的に言い放つ。"
+    $ ctc_mode = "page"
+    extend "魔人は一歩前に踏み出し、挑発的に言い放つ。\n"
 
     scene demon_laugh at fullscreen_bg
     with fade
@@ -77,7 +81,8 @@ label CH_B_09_Confronting_the_devil:
     voice "audio/voice/b/09/2_9_剣とアリア.mp3"
     extend "剣とアリアーナを渡せば、お前一人は逃がしてやろう。"
     voice "audio/voice/b/09/2_10_どうする？.mp3"
-    extend "どうする？私の言うことに従うか、それともここで命を散らすか？」"
+    $ ctc_mode = "page"
+    extend "どうする？私の言うことに従うか、それともここで命を散らすか？」\n"
 
     voice "audio/voice/b/09/0_39_さあ、どう.mp3"
     $ choice_comment = "さあ、どうする！？"

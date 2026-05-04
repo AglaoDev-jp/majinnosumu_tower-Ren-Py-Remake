@@ -334,7 +334,7 @@ screen navigation():
             textbutton _("スタート") action Start()
             # その場で関数を呼ぶ（本編に入らない）
             # ※ 本番前にこのボタンは消してね 👍
-            textbutton _("【デバッグ】クリア初期化") action Function(reset_clears)
+            # textbutton _("【デバッグ】クリア初期化") action Function(reset_clears)
             textbutton _("エンディング一覧") action ShowMenu("ending_list_screen")
 
             # ------------------------------------------------------------
@@ -1178,6 +1178,10 @@ screen keyboard_help():
         label "Shift+A"
         text _("アクセシビリティーメニューを開きます。")
 
+    # 追加 B でシェード
+    hbox:
+        label "B"
+        text _("（追加）シェード機能")
 
 screen mouse_help():
 

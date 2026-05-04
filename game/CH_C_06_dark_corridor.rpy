@@ -13,7 +13,8 @@ label CH_C_06_dark_corridor:
     voice "audio/voice/c/06/0_11_目を凝らし.mp3"
     extend "目を凝らしても何も見えず、頼りになるのは壁を手探りする自分の手だけだった。\n"
     voice "audio/voice/c/06/0_12_冷たい石壁.mp3"
-    extend "冷たい石壁の感触が指先に伝わり、湿気を含んだ空気が不快にまとわりつく。"
+    $ ctc_mode = "page"
+    extend "冷たい石壁の感触が指先に伝わり、湿気を含んだ空気が不快にまとわりつく。\n"
 
     scene dark_corridor_8 at fullscreen_bg
     with fade
@@ -30,7 +31,8 @@ label CH_C_06_dark_corridor:
     voice "audio/voice/c/06/0_18_立ち止まる.mp3"
     extend "立ち止まると、その音もまた止まる。\n"
     voice "audio/voice/c/06/0_19_しかし、振.mp3"
-    extend "しかし、振り返っても、暗闇の中には何も見えない。"
+    $ ctc_mode = "page"
+    extend "しかし、振り返っても、暗闇の中には何も見えない。\n"
 
     scene dark_corridor_2 at fullscreen_bg
     voice "audio/voice/c/06/0_20_さらに進む.mp3"
@@ -44,6 +46,7 @@ label CH_C_06_dark_corridor:
     voice "audio/voice/c/06/0_24_背後にはま.mp3"
     extend "背後にはまだ何かが潜んでいるかもしれない。\n"
     voice "audio/voice/c/06/0_25_緊張が高ま.mp3"
+    $ ctc_mode = "page"
     extend "緊張が高まる中、あなたは進むべき道を選ばなければならない。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
@@ -54,8 +57,11 @@ label CH_C_06_dark_corridor:
 
         "１．左の回廊に進む":
             stop voice
+            stop music fadeout 1.0
             scene dark_corridor_6 at fullscreen_bg
+            play music "audio/se/風が吹く1.mp3"
             with fade
+
             voice "audio/voice/c/06/1_0_あなたは迷.mp3"
             narrator_arrow "あなたは迷いながらも左の回廊へ進むことを選んだ。\n"
             voice "audio/voice/c/06/1_1_回廊は進む.mp3"
@@ -73,7 +79,8 @@ label CH_C_06_dark_corridor:
             extend "重たい瓦礫が次々と降り注ぎ、あなたは暗闇の中に埋もれてしまった。\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
 
@@ -96,13 +103,15 @@ label CH_C_06_dark_corridor:
             voice "audio/voice/c/06/3_3しばらくす.mp3"
             extend "しばらくすると、地面が軽く揺れ、左の方向から何かが崩れるような音が聞こえた。\n"
             voice "audio/voice/c/06/3_4_あなたは立.mp3"
-            extend "あなたは立ち止まり、慎重に足を運ぶ。" 
+            $ ctc_mode = "page"
+            extend "あなたは立ち止まり、慎重に足を運ぶ。\n" 
 
             jump CH_C_07_Heros_Statue
 
         "３．気配を感じ、立ち止まる":
             stop voice
-            stop music
+            stop music fadeout 1.0
+            play music "audio/se/風が吹く1.mp3"
             scene dark_corridor_4 at fullscreen_bg
             with fade
             voice "audio/voice/c/06/2_0_あなたは何.mp3"
@@ -111,6 +120,7 @@ label CH_C_06_dark_corridor:
             extend "ここで迎え撃つ覚悟を決めた。\n"
             voice "audio/voice/c/06/2_2_しばらくそ.mp3"
             show black at fullscreen_bg with {"master": dissolve}
+            $ ctc_mode = "page"
             extend "しばらくその場で耳を澄ませ、何が起きるのかを待つ。\n"
 
             stop music
@@ -123,6 +133,7 @@ label CH_C_06_dark_corridor:
             with fade
             extend "霧に触れた瞬間、冷たい感触が全身を包み込み、動けなくなる。\n"
             voice "audio/voice/c/06/2_6_からだが凍.mp3"
+            $ ctc_mode = "page"
             extend "からだが凍りついたように重く、呼吸すらも困難になっていく。\n"
 
             stop music
@@ -136,7 +147,8 @@ label CH_C_06_dark_corridor:
             extend "あなたは、その場に留まりすぎたことで、永遠に暗闇に閉じ込められることになった。\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
 

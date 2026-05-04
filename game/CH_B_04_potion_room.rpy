@@ -24,7 +24,8 @@ label CH_B_04_potion_room:
     voice "audio/voice/b/04/0_7_しかし、そ.mp3"
     extend "しかし、その扉には頑丈な錠前がかけられており、このままでは先に進むことができない。\n"
     voice "audio/voice/b/04/0_8_鍵がこの部.mp3"
-    extend "鍵がこの部屋のどこかに隠されているのだろうか。"
+    $ ctc_mode = "page"
+    extend "鍵がこの部屋のどこかに隠されているのだろうか。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
     voice "audio/voice/b/04/2_0_さて、どう.mp3"
@@ -43,7 +44,8 @@ label CH_B_04_potion_room:
 
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
             $ renpy.full_restart()
@@ -57,7 +59,8 @@ label CH_B_04_potion_room:
             voice "audio/voice/b/04/0_0_調合台の裏.mp3"
             narrator_arrow "調合台の裏を調べると、隠された鍵を見つけた。\n"
             voice "audio/voice/b/04/0_1_この鍵で部.mp3"
-            extend "この鍵で部屋の扉を開ける、次のフロアに進もう。"
+            $ ctc_mode = "page"
+            extend "この鍵で部屋の扉を開ける、次のフロアに進もう。\n"
 
             scene black
             with Dissolve(1.0)
@@ -74,7 +77,8 @@ label CH_B_04_potion_room:
             extend "あなたはすべてをあきらめた。\n"
             voice "audio/voice/ゲームオーバー.mp3"
             scene skeleton_bad at fullscreen_bg
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
             $ renpy.full_restart()

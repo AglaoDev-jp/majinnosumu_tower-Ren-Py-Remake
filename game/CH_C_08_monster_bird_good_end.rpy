@@ -22,7 +22,8 @@ label CH_C_08_monster_bird_good_end:
     voice "audio/voice/c/08e/2_4_その隙にお.mp3"
     extend "その隙にお前が勇者の剣とやらで魔人の弱点をつけ。"
     voice "audio/voice/c/08e/2_5_悪い話では.mp3"
-    extend "悪い話ではないだろう？」"
+    $ ctc_mode = "page"
+    extend "悪い話ではないだろう？」\n"
 
     scene black
     stop music
@@ -30,7 +31,8 @@ label CH_C_08_monster_bird_good_end:
     voice "audio/voice/c/08e/2_6_二人の作戦.mp3"
     narrator_arrow "二人の作戦が整ったところで、階下から重々しい足音が響いてきた。\n"
     voice "audio/voice/c/08e/2_7_魔人が戻っ.mp3"
-    extend "魔人が戻ってきたのだ。"
+    $ ctc_mode = "page"
+    extend "魔人が戻ってきたのだ。\n"
 
     scene demon_anger at fullscreen_bg
     play sound "audio/se/ゴブリンの鳴き声1.mp3"
@@ -44,9 +46,12 @@ label CH_C_08_monster_bird_good_end:
     voice "audio/voice/c/08e/2_13_でもな、お.mp3"
     extend "でもな、お前もそろそろこの塔から出て行く頃合いだろう。」\n"
     voice "audio/voice/c/08e/2_14_魔人は苛立.mp3"
+    $ ctc_mode = "page"
     extend "魔人は苛立ちを隠しきれない。\n"
+
+
     voice "audio/voice/c/08e/2_15_「ふざける.mp3"
-    extend "「ふざけるな！ここは私の力を集めるための場所だ！お前に邪魔される筋合いはない！」\n"
+    narrator_arrow "「ふざけるな！ここは私の力を集めるための場所だ！お前に邪魔される筋合いはない！」\n"
     voice "audio/voice/c/08e/2_18_怪鳥は冷や.mp3"
     extend "怪鳥は冷ややかな笑みを浮かべ、低く答えた。\n"
     voice "audio/voice/c/08e/2_19_「お前の力.mp3"
@@ -60,7 +65,8 @@ label CH_C_08_monster_bird_good_end:
     voice "audio/voice/c/08e/2_23_私の力はま.mp3"
     extend "私の力はまだ完全ではない。"
     voice "audio/voice/c/08e/2_24_お前ごとき.mp3"
-    extend "お前ごときに干渉される筋合いはない！」"
+    $ ctc_mode = "page"
+    extend "お前ごときに干渉される筋合いはない！」\n"
 
     scene monster_bird_2 at fullscreen_bg
     play music "audio/bgm/ENEMY_ENCOUNTER.mp3"
@@ -81,12 +87,14 @@ label CH_C_08_monster_bird_good_end:
     extend "「なに！この呪文は我々を封じ込めた魔法…！」\n"
     play sound "audio/se/弓矢が刺さる.mp3"
     voice "audio/voice/c/08e/2_32_あなたはす.mp3"
+    $ ctc_mode = "page"
     extend "あなたはすぐに剣を取り出し、魔人の胸にある結晶を狙って突き刺した！\n"
+
     scene demon_pained at fullscreen_bg
     stop music
     play sound "audio/se/ガラスが割れる1.mp3"
     voice "audio/voice/c/08e/2_33_剣は魔人の.mp3"
-    extend "剣は魔人の結晶に深く突き刺さり、光が一瞬弾けた。\n"
+    narrator_arrow "剣は魔人の結晶に深く突き刺さり、光が一瞬弾けた。\n"
     voice "audio/voice/c/08e/2_35_「ぐぅ…！.mp3"
     extend "「ぐぅ…！貴様、この私にこんな傷を…！」\n"
     voice "audio/voice/c/08e/2_36_魔人は苦し.mp3"
@@ -96,10 +104,10 @@ label CH_C_08_monster_bird_good_end:
     extend "魔人はその場にひざまずきながらも、低い声で呪いの言葉を吐いた。\n"
     scene expression Solid("#ffffff")
     voice "audio/voice/c/08e/2_38_「覚えてお.mp3"
-    extend "「覚えておけ…私がこの程度で終わると思うな…いつか必ず復活してみせる…！」"
-
+    extend "「覚えておけ…私がこの程度で終わると思うな…いつか必ず復活してみせる…！」\n"
     voice "audio/voice/c/08e/2_39_その言葉を.mp3"
-    narrator_arrow "その言葉を最後に、魔人は煙のように消え去った。"
+    $ ctc_mode = "page"
+    extend "その言葉を最後に、魔人は煙のように消え去った。\n"
 
     scene monster_bird_4 at fullscreen_bg
     with fade
@@ -114,7 +122,8 @@ label CH_C_08_monster_bird_good_end:
     voice "audio/voice/c/08e/2_44_致命傷では.mp3"
     extend "致命傷ではないようだが、あの調子なら300年は復活できまい。」\n"
     voice "audio/voice/c/08e/2_45_怪鳥はしば.mp3"
-    extend "怪鳥はしばらくあなたを見つめた後、ふと考え込むような表情を浮かべた。"
+    $ ctc_mode = "page"
+    extend "怪鳥はしばらくあなたを見つめた後、ふと考え込むような表情を浮かべた。\n"
 
     # 現在の文字表示速度を退避（演出後に元へ戻すため）
     $ _old_cps = preferences.text_cps

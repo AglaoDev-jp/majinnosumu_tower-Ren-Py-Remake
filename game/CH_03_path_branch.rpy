@@ -13,6 +13,7 @@ label CH_03_path_branch:
     voice "audio/voice/s/03/0_2_死んではい.mp3"
     extend "死んではいないようだが、この場所で一体何があったのだろうか？\n"
     voice "audio/voice/s/03/0_3_看守はその.mp3"
+    $ ctc_mode = "page"
     extend "看守はその場で何かを守ろうとしていたかのように手を握りしめている。\n"
 
     voice "audio/voice/s/03/0_4_あなたは慎.mp3"
@@ -35,11 +36,13 @@ label CH_03_path_branch:
     voice "audio/voice/s/03/0_8_カチッとい.mp3"
     extend "カチッという音とともに、重いドアがゆっくりと開き始めた。\n"
     voice "audio/voice/s/03/0_9_あなたは、.mp3"
+    $ ctc_mode = "page"
     extend "あなたは、慎重に次の部屋へと進む。\n"
 
     scene branch at fullscreen_bg
     with fade
     voice "audio/voice/s/03/0_10_ここから先.mp3"
+    $ ctc_mode = "page"
     narrator_arrow "ここから先は分かれ道のようだ。"
 
     voice "audio/voice/s/03/0_11_どちらへ進.mp3"

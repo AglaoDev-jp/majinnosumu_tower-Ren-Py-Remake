@@ -22,6 +22,7 @@ label CH_B_09_Confronting_the_devil_BAD_2:
     voice "audio/voice/b/09b2/1_3_魔人は満足.mp3"
     extend "魔人は満足げに剣を受け取り、その力を得たことで邪悪な笑みを浮かべた。\n"
     voice "audio/voice/b/09b2/4_1_「これでお.mp3"
+    $ ctc_mode = "page"
     extend "「これでお前には用はない。さっさと消え失せろ！」\n"
 
 
@@ -33,7 +34,8 @@ label CH_B_09_Confronting_the_devil_BAD_2:
     extend "猛烈な力であなたの体は宙を舞い、そのまま塔の出口へと飛ばされた。\n"
     play sound "audio/se/全力で踏み込む.mp3"
     voice "audio/voice/b/09b2/1_8_あなたは地.mp3"
-    extend "あなたは地面にたたきつけられ、意識を失いそうになる。"
+    $ ctc_mode = "page"
+    extend "あなたは地面にたたきつけられ、意識を失いそうになる。\n"
 
     scene stone_gate at fullscreen_bg
     stop music
@@ -43,7 +45,8 @@ label CH_B_09_Confronting_the_devil_BAD_2:
     voice "audio/voice/b/09b2/1_10_あなたは、.mp3"
     extend "あなたは、恐怖と絶望に駆られて、その場を逃げ出すことしかできなかった。\n"
     voice "audio/voice/ゲームオーバー.mp3"
-    extend "ゲームオーバー"
+    $ ctc_mode = "page"
+    extend "ゲームオーバー。\n"
 
     scene black
     with Dissolve(1.0)

@@ -14,6 +14,7 @@ label CH_B_05_garden:
     voice "audio/voice/b/05/0_4_そこには部.mp3"
     extend "そこには部屋の中とは思えない空間が広がっていた。\n"
     voice "audio/voice/b/05/0_5_室内庭園と.mp3"
+    $ ctc_mode = "page"
     extend "室内庭園といったところだろうか\n"
 
     scene garden at fullscreen_bg
@@ -27,7 +28,8 @@ label CH_B_05_garden:
     voice "audio/voice/b/05/0_9_出口のよう.mp3"
     extend "出口のようなものは見当たらない。\n"
     voice "audio/voice/b/05/1_0_注意深く、.mp3"
-    extend "注意深く、次のフロアへ進むための手がかりを探す。"
+    $ ctc_mode = "page"
+    extend "注意深く、次のフロアへ進むための手がかりを探す。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
     voice "audio/voice/b/05/1_0_さて、どう.mp3"
@@ -44,7 +46,8 @@ label CH_B_05_garden:
             voice "audio/voice/b/05/0_0_古い噴水を.mp3"
             narrator_arrow "古い噴水を調べると、水が引いて隠された階段が現れた。\n"
             voice "audio/voice/b/05/0_1_次のフロア.mp3"
-            extend "次のフロアに進もう。"
+            $ ctc_mode = "page"
+            extend "次のフロアに進もう。\n"
 
             scene black
             with Dissolve(1.0)
@@ -63,7 +66,8 @@ label CH_B_05_garden:
 
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
             $ renpy.full_restart()
@@ -83,7 +87,8 @@ label CH_B_05_garden:
 
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
             $ renpy.full_restart()

@@ -23,6 +23,7 @@ label CH_B_09_Confronting_the_devil_GOOD_2 :
     voice "audio/voice/b/09g2/0_6_絶望的な状.mp3"
     extend "絶望的な状況に追い込まれていたあなたは、提案を受け入れることを決意した。\n"
     voice "audio/voice/b/09g2/0_7_アリアーナ.mp3"
+    $ ctc_mode = "page"
     extend "アリアーナを見つめ、申し訳ない気持ちで彼女と剣を魔人に差し出した。\n"
 
     scene black
@@ -37,7 +38,8 @@ label CH_B_09_Confronting_the_devil_GOOD_2 :
     stop music 
     play sound "audio/se/重力魔法2.mp3"    
     voice "audio/voice/b/09g2/0_11_魔人は、あ.mp3"
-    extend "魔人は、あなたに向けて手から暗黒のエネルギーを放つ！"
+    $ ctc_mode = "page"
+    extend "魔人は、あなたに向けて手から暗黒のエネルギーを放つ！\n"
 
     jump CH_B_09_GOOD_END
 

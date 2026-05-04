@@ -15,14 +15,16 @@ label CH_C_05_hidden_library:
     voice "audio/voice/c/05/0_2_書庫の中は.mp3"
     extend "書庫の中は、まるで時間が止まったかのような静寂が支配しており、古い紙とインクの独特な匂いが漂っている。\n"
     voice "audio/voice/c/05/0_4_かすかな光.mp3"
-    extend "かすかな光が、天井の小さな隙間から差し込み、舞い上がった埃がその光を浴びてきらきらと輝いている。"
+    $ ctc_mode = "page"
+    extend "かすかな光が、天井の小さな隙間から差し込み、舞い上がった埃がその光を浴びてきらきらと輝いている。\n"
 
     voice "audio/voice/c/05/0_6_この書庫に.mp3"
     narrator_arrow "この書庫には、脱出の手がかりとなる重要な情報が隠されているかもしれない。\n"
     voice "audio/voice/c/05/0_7_だが同時に.mp3"
     extend "だが同時に、この場所には未知の危険が潜んでいるような気配も感じる。\n"
     voice "audio/voice/c/05/0_8_軽.mp3"
-    extend "軽はずみに動くことはできない。"
+    $ ctc_mode = "page"
+    extend "軽はずみに動くことはできない。\n"
 
     voice "audio/voice/c/05/0_9_書棚を見渡.mp3"
     narrator_arrow "書棚を見渡していると、突然、背後にひやりとするような異様な気配を感じた。\n"
@@ -31,6 +33,7 @@ label CH_C_05_hidden_library:
     voice "audio/voice/c/05/0_11_書物に触れ.mp3"
     extend "書物に触れたその瞬間、書庫全体がわずかに揺れ始めた。\n"
     voice "audio/voice/c/05/0_12_この書庫に.mp3"
+    $ ctc_mode = "page"
     extend "この書庫には、何かが隠されているのは確かだ。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
@@ -51,6 +54,7 @@ label CH_C_05_hidden_library:
             voice "audio/voice/c/05/1_2_ページには.mp3"
             extend "ページには魔人の弱点に関する古代の文字がびっしりと書かれていた。\n"
             voice "audio/voice/c/05/1_3_それらの文.mp3"
+            $ ctc_mode = "page"
             extend "それらの文字を読み進めることで、あなたは魔人を倒すための貴重な情報を手に入れることができた。\n"
 
             stop music
@@ -60,11 +64,14 @@ label CH_C_05_hidden_library:
             voice "audio/voice/c/05/1_5_しかし、読.mp3"
             narrator_arrow "しかし、読み進めるにつれて、ページから漂う冷たい風が部屋全体に広がり、書庫内の空気が一変する。\n"
             voice "audio/voice/c/05/1_8_気づいたと.mp3"
-            extend "気づいたときには、あなたの身体が重くなり、まぶたが重く下がっていく。"
+            extend "気づいたときには、あなたの身体が重くなり瞼が重く下がっていく。\n"
             voice "audio/voice/c/05/1_7_書物から黒.mp3"
             extend "書物から黒い霧が立ち上がり、あなたの周囲に重々しい呪文が響きだした。\n"
             voice "audio/voice/c/05/1_9_必死に抵抗.mp3"
+            $ ctc_mode = "page"
             extend "必死に抵抗しようとするが、呪いの力が強すぎる。\n"
+
+
             show black at fullscreen_bg with {"master": dissolve}
             stop music fadeout 2.0
             voice "audio/voice/c/05/1_10_目を閉じた.mp3"
@@ -76,7 +83,8 @@ label CH_C_05_hidden_library:
                         
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
 
@@ -94,7 +102,8 @@ label CH_C_05_hidden_library:
             voice "audio/voice/c/05/3_2_ふと、一つ.mp3"
             extend "ふと、一つの棚の奥深くに他と異なる、きらびやかな装丁の本があることに気付いた。\n"
             voice "audio/voice/c/05/3_3_その本は他.mp3"
-            extend "その本は他の古書とは明らかに違う存在感を放っている。"
+            $ ctc_mode = "page"
+            extend "その本は他の古書とは明らかに違う存在感を放っている。\n"
 
             scene hidden_library_book at fullscreen_bg
             with fade
@@ -103,14 +112,16 @@ label CH_C_05_hidden_library:
             voice "audio/voice/c/05/3_5_そこには、.mp3"
             extend "そこには、「古代の魔法書から学んだ魔人の秘密」と古代の文字で記されていた。\n"      
             voice "audio/voice/c/05/3_6_心臓が高鳴.mp3" 
-            extend "心臓が高鳴るのを感じながら、そっとその本を開く。"
+            $ ctc_mode = "page"
+            extend "心臓が高鳴るのを感じながら、そっとその本を開く。\n"
             
             voice "audio/voice/c/05/3_7_本の中には.mp3"            
             narrator_arrow "本の中には、魔人を封じるための魔法と、その詠唱の詳細が書かれているようだ。\n"
             stop music
             play sound "audio/se/発見.mp3"
             voice "audio/voice/c/05/3_8_この本は、.mp3"
-            extend "この本は、必要だ、持っていくことにしよう。"
+            $ ctc_mode = "page"
+            extend "この本は、必要だ、持っていくことにしよう。\n"
 
             scene black
             with Dissolve(1.0)
@@ -136,7 +147,8 @@ label CH_C_05_hidden_library:
             extend "ワナの魔法で全身に強烈な光を浴びたあなたは、そのまま意識を失ってしまった。\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
 

@@ -17,6 +17,7 @@ label CH_B_07_treasure_room:
     voice "audio/voice/b/07/0_15_目立つ宝箱.mp3"
     extend "目立つ宝箱が部屋の中央に置かれており、煌びやかな装飾が施されている。\n"
     voice "audio/voice/b/07/0_16_その隣には.mp3"
+    $ ctc_mode = "page"
     extend "その隣には一見目立たない隅の小箱があり、他の財宝に埋もれるように置かれている。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
@@ -36,7 +37,8 @@ label CH_B_07_treasure_room:
             extend "あなたは、爆風で吹き飛ばされてしまった！\n"
             voice "audio/voice/ゲームオーバー.mp3"
             scene skeleton_bad at fullscreen_bg
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
             $ renpy.full_restart()            
@@ -50,7 +52,8 @@ label CH_B_07_treasure_room:
             voice "audio/voice/b/07/0_1_伸ばすこと.mp3"
             extend "伸ばすことで上側の通路に届くようだ。\n"
             voice "audio/voice/b/07/0_2_次のフロア.mp3"
-            extend "次のフロアに進もう。"
+            $ ctc_mode = "page"
+            extend "次のフロアに進もう。\n"
             scene black
             with Dissolve(1.0)
             jump CH_B_08_Majin_room
@@ -72,7 +75,8 @@ label CH_B_07_treasure_room:
 
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
             $ renpy.full_restart()

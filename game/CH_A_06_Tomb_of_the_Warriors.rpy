@@ -15,14 +15,16 @@ label CH_A_06_Tomb_of_the_Warriors:
     voice "audio/voice/a/06/0_2_この武器庫.mp3"
     extend "この武器庫の端には小さく「出口」と書かれた場所が見える。\n"
     voice "audio/voice/a/06/0_3_もしや、こ.mp3"
-    extend "もしや、ここから外に出られるのではないか。"
+    $ ctc_mode = "page"
+    extend "もしや、ここから外に出られるのではないか。\n"
 
     scene exit_discovery at fullscreen_bg
     with fade
     voice "audio/voice/a/06/0_4_部屋の隅に.mp3"
     narrator_arrow "部屋の隅に隠された小さな扉を見つけ、あなたはそれが塔の外へ続く道だと悟る。\n"
     voice "audio/voice/a/06/0_5_不安を感じ.mp3"
-    extend "不安を感じながらも、あなたは扉を開けて外に出ることを決意する。"
+    $ ctc_mode = "page"
+    extend "不安を感じながらも、あなたは扉を開けて外に出ることを決意する。\n"
 
     play music "audio/se/風に揺れる草木1.mp3"
     scene forest_entrance_1 at fullscreen_bg
@@ -36,7 +38,8 @@ label CH_A_06_Tomb_of_the_Warriors:
     voice "audio/voice/a/06/0_9_遠くからは.mp3"
     extend "遠くからは風に乗って木々のざわめきが聞こえる。\n"
     voice "audio/voice/a/06/0_10_その先に広.mp3"
-    extend "その先に広がる異様な光景に、あなたは足を止める。"
+    $ ctc_mode = "page"
+    extend "その先に広がる異様な光景に、あなたは足を止める。\n"
 
     scene sword_grave at fullscreen_bg
     with fade
@@ -46,6 +49,7 @@ label CH_A_06_Tomb_of_the_Warriors:
     voice "audio/voice/a/06/0_12_その場所は.mp3"
     extend "その場所は、まるで戦士たちの魂を弔う墓碑のようだ。\n"
     voice "audio/voice/a/06/0_13_冷たい風が.mp3"
+    $ ctc_mode = "page"
     extend "冷たい風が吹き抜け、木々がざわめき始める。\n"
 
     scene sword_a at fullscreen_bg
@@ -55,6 +59,7 @@ label CH_A_06_Tomb_of_the_Warriors:
     voice "audio/voice/a/06/0_15_呼応するか.mp3"
     extend "呼応するかのように剣の周囲から霧のような白い光が立ち上り、次々と形をなしていく。\n"
     voice "audio/voice/a/06/0_16_やがて、無.mp3"
+    $ ctc_mode = "page"
     extend "やがて、無数の戦士の霊があなたの前に浮かび上がる。\n"
 
     play music "audio/bgm/透明な亡霊.mp3"
@@ -73,7 +78,8 @@ label CH_A_06_Tomb_of_the_Warriors:
     voice "audio/voice/a/06/0_22_霊たちの眼.mp3"
     extend "霊たちの眼差しには期待と畏敬の念が混じっている。\n"
     voice "audio/voice/a/06/0_23_しかし、そ.mp3"
-    extend "しかし、その中には深い悲しみと無念の思いも感じられる。"
+    $ ctc_mode = "page"
+    extend "しかし、その中には深い悲しみと無念の思いも感じられる。\n"
 
     voice "audio/voice/a/06/0_24_「我らはか.mp3"
     narrator_arrow "「我らはかつて、魔人たちと戦い、この地で散った者たちだ。"
@@ -86,7 +92,8 @@ label CH_A_06_Tomb_of_the_Warriors:
     voice "audio/voice/a/06/0_28_彼らが勘違.mp3"
     extend "彼らが勘違いしているのだろうか。\n"
     voice "audio/voice/a/06/0_29_それとも、.mp3"
-    extend "それとも、この剣が何か特別な意味を持つのだろうか。"
+    $ ctc_mode = "page"
+    extend "それとも、この剣が何か特別な意味を持つのだろうか。\n"
 
     voice "audio/voice/a/06/0_30_さて、どう.mp3"
     $ choice_comment = "さて、どうしようか？" 

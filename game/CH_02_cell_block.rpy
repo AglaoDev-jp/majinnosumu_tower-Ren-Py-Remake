@@ -9,6 +9,7 @@ label CH_02_cell_block:
     voice "audio/voice/s/02/0_0_塔の独房か.mp3"
     narrator_arrow "塔の独房から脱出したたあなたは、暗く湿った石の廊下を進み、ある部屋に辿り着いた。\n"
     voice "audio/voice/s/02/0_1_部屋の中に.mp3"
+    $ ctc_mode = "page"
     extend "部屋の中に足を踏み入れると、薄暗い光がわずかに差し込む中で、家具や物品が見えてくる。\n"
 
     scene cell_block at fullscreen_bg
@@ -20,6 +21,7 @@ label CH_02_cell_block:
     voice "audio/voice/s/02/0_4_机の上には.mp3"
     extend "机の上には乱雑に置かれた書類の山と、所々錆びた鍵の束が無造作に置かれている。\n"
     voice "audio/voice/s/02/0_5_この部屋は.mp3"
+    $ ctc_mode = "page"
     extend "この部屋は、独房の監視に使われていたのではないかと推測される。\n"
 
     voice "audio/voice/s/02/0_6_その隣には.mp3"
@@ -38,6 +40,7 @@ label CH_02_cell_block:
     voice "audio/voice/s/02/0_12_誰かが強引.mp3"
     extend "誰かが強引にこじ開けようとした形跡がある。\n"
     voice "audio/voice/s/02/0_13_しかしそれ.mp3"
+    $ ctc_mode = "page"
     extend "しかしそれでも扉は頑丈で、簡単に開きそうにない。\n"
 
     play music "audio/bgm/奇妙な話.mp3"
@@ -51,12 +54,14 @@ label CH_02_cell_block:
             voice "audio/voice/s/02/1_0_あなたは大.mp3"
             narrator_arrow "あなたは大きなチェストの前に立ち、その錠前に手をかける。\n"
             voice "audio/voice/s/02/1_1_錆びた鍵穴.mp3"
+            $ ctc_mode = "page"
             extend "錆びた鍵穴に合う鍵を見つけ、ゆっくりと回して蓋を開ける。\n"
 
             stop music
             play sound "audio/se/ライオンの鳴き声1.mp3"
             scene cell_block_monster_1 at fullscreen_bg
             voice "audio/voice/s/02/1_2_すると突然.mp3"
+            $ ctc_mode = "page"
             narrator_arrow "すると突然、中から怪物が飛び出してきた！\n"
 
             play sound "audio/se/怖い系リプレイ音.mp3"
@@ -65,6 +70,7 @@ label CH_02_cell_block:
             voice "audio/voice/s/02/1_4_鋭い爪があ.mp3"
             extend "鋭い爪があなたの腕を掴み、力強い一撃があなたを地面に叩きつけた。\n"
             voice "audio/voice/s/02/1_5_あなたは抵.mp3"
+            $ ctc_mode = "page"
             extend "あなたは抵抗する間もなく、怪物の牙が迫り、視界が暗転する。\n"
 
             scene black
@@ -79,7 +85,8 @@ label CH_02_cell_block:
             extend "どうやら脱出の望みは、ここで断たれるようだ。\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
             $ renpy.full_restart()
@@ -92,7 +99,8 @@ label CH_02_cell_block:
             voice "audio/voice/s/02/2_1_なんほんも.mp3"
             extend "何本も絡まった鍵を一つずつ試していくが、どれもドアの鍵には合わない。\n"
             voice "audio/voice/s/02/2_2_焦りが募る.mp3"
-            extend "焦りが募る中、最後の鍵を試そうとしたその時、突然、机の下から低い唸り声が響いた。"
+            $ ctc_mode = "page"
+            extend "焦りが募る中、最後の鍵を試そうとしたその時、突然、机の下から低い唸り声が響いた。\n"
 
             stop music
             play sound "audio/se/ライオンの鳴き声1.mp3"
@@ -104,6 +112,7 @@ label CH_02_cell_block:
             voice "audio/voice/s/02/2_4_暗闇の中で.mp3"
             extend "暗闇の中で見え隠れする鋭い牙と爪が、あなたに襲いかかる。\n"
             voice "audio/voice/s/02/2_5_恐怖に凍り.mp3"
+            $ ctc_mode = "page"
             extend "恐怖に凍りついたあなたは身動きが取れず、怪物の凶暴な一撃を受けて倒れ込む。\n"
 
             scene black
@@ -118,7 +127,8 @@ label CH_02_cell_block:
             extend "どうやら脱出の望みは、ここで断たれるようだ。\n"
             scene skeleton_bad at fullscreen_bg
             voice "audio/voice/ゲームオーバー.mp3"
-            extend "ゲームオーバー。"
+            $ ctc_mode = "page"
+            extend "ゲームオーバー。\n"
             scene black
             with Dissolve(1.0)
             $ renpy.full_restart()

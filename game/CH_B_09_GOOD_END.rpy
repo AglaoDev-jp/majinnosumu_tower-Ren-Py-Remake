@@ -9,6 +9,7 @@ label CH_B_09_GOOD_END:
     voice "audio/voice/b/09ge/0_11_しかし、次.mp3"
     narrator_arrow "しかし、次の瞬間、剣が強烈な光を放ち始めた。\n"
     voice "audio/voice/b/09ge/0_12_剣の光はま.mp3"
+    $ ctc_mode = "page"
     extend "剣の光はまるで生きているかのように輝き、あたり一面に広がる。\n"
     stop music fadeout 2.0
 
@@ -26,7 +27,8 @@ label CH_B_09_GOOD_END:
     voice "audio/voice/b/09ge/3_0_「私の祖先.mp3"
     extend "「私の祖先はかつて、この剣を託された者たちだった。"
     voice "audio/voice/b/09ge/3_1_この剣の力.mp3"
-    extend "この剣の力は、私の血にも宿っているのです！」"
+    $ ctc_mode = "page"
+    extend "この剣の力は、私の血にも宿っているのです！」\n"
 
     scene expression Solid("#ffffff")
 
@@ -34,7 +36,8 @@ label CH_B_09_GOOD_END:
     voice "audio/voice/b/09ge/0_19_アリアーナ.mp3"
     narrator_arrow "アリアーナは剣を高く掲げ、その光を魔人に向けて放った。"
     voice "audio/voice/b/09ge/0_20_強烈な光が.mp3"
-    extend "強烈な光が魔人を貫き、彼の邪悪な力を浄化していく。"
+    $ ctc_mode = "page"
+    extend "強烈な光が魔人を貫き、彼の邪悪な力を浄化していく。\n"
 
     scene demon_pained at fullscreen_bg
     voice "audio/voice/b/09ge/3_2_「やめろ….mp3"
@@ -46,7 +49,8 @@ label CH_B_09_GOOD_END:
     scene expression Solid("#ffffff")
     with fade
     voice "audio/voice/b/09ge/0_25_魔人の姿は.mp3"
-    extend "魔人の姿は光の中で消え去り、塔の中には静寂が訪れた。"
+    $ ctc_mode = "page"
+    extend "魔人の姿は光の中で消え去り、塔の中には静寂が訪れた。\n"
 
     scene tower_gate at fullscreen_bg
     with fade
@@ -64,7 +68,8 @@ label CH_B_09_GOOD_END:
     voice "audio/voice/b/09ge/1_5_また、あな.mp3"
     extend "また、あなたは我が国に伝わる勇者の剣を託された者。"
     voice "audio/voice/b/09ge/1_6_これも天命.mp3"
-    extend "これも天命ならば、フィオリス王国にあなたの重要な役割があるはずです。」"
+    $ ctc_mode = "page"
+    extend "これも天命ならば、フィオリス王国にあなたの重要な役割があるはずです。」\n"
 
     scene end_grassland_princess_up at fullscreen_bg
     with fade
@@ -75,7 +80,8 @@ label CH_B_09_GOOD_END:
     voice "audio/voice/b/09ge/1_8_先祖の血に.mp3"
     extend "先祖の血に宿る、自分の力を信じることもできなかったでしょう。\n"
     voice "audio/voice/b/09ge/1_9_ありがとう.mp3"
-    extend "ありがとう。{w=0.6}私に勇気を与えてくれて。」"
+    $ ctc_mode = "page"
+    extend "ありがとう。{w=0.6}私に勇気を与えてくれて。」\n"
 
     play music "audio/bgm/プレリュード第2番「名前を入力してください」.mp3" noloop # noloopでループしない。
 

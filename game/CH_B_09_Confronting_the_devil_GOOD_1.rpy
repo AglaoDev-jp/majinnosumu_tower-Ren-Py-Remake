@@ -19,6 +19,7 @@ label CH_B_09_Confronting_the_devil_GOOD_1 :
     voice "audio/voice/b/09g1/1_0_「その剣….mp3"
     extend "「その剣…私に渡して。"
     voice "audio/voice/b/09g1/1_1_わたし、使.mp3"
+    $ ctc_mode = "page"
     extend "私、使えるかもしれない。」\n"
 
     scene princess_and_sword at fullscreen_bg
@@ -32,6 +33,7 @@ label CH_B_09_Confronting_the_devil_GOOD_1 :
     voice "audio/voice/b/09g1/0_9_魔人はその.mp3"
     extend "魔人はその様子を見て不敵に笑う。\n"
     voice "audio/voice/b/09g1/3_0_「アリアー.mp3"
+    $ ctc_mode = "page"
     extend "「アリアーナ、お前が勇者の剣を使うなど、愚かにも程がある。」\n"
 
     jump CH_B_09_GOOD_END

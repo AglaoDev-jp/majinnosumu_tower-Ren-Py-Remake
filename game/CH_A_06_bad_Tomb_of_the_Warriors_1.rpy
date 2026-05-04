@@ -13,7 +13,8 @@ label CH_A_06_bad_Tomb_of_the_Warriors_1:
     voice "audio/voice/a/06b/0_1_胸の内では.mp3"
     extend "胸の内では、真実を隠すことへの罪悪感が渦巻いていたが、それでも彼らの期待に応えるために、あなたは嘘をつくことを選んだ。\n"
     voice "audio/voice/a/06b/0_2_戦士たちは.mp3"
-    extend "戦士たちは歓喜の声を上げ、あなたにひざまずいて忠誠を誓った"
+    $ ctc_mode = "page"
+    extend "戦士たちは歓喜の声を上げ、あなたにひざまずいて忠誠を誓った。\n"
 
     voice "audio/voice/a/06b/0_3_「やっと….mp3"
     narrator_arrow "「やっと…やっと我らの待ち望んだ勇者が現れた！」\n"
@@ -28,7 +29,9 @@ label CH_A_06_bad_Tomb_of_the_Warriors_1:
     scene sword_a at fullscreen_bg
     with fade
     voice "audio/voice/a/06b/0_8_その光の中.mp3"
+    $ ctc_mode = "page"
     extend "その光の中で、あなたの剣も一層強く輝きを増していく。\n"
+
     play music "audio/se/風が吹く1.mp3"
     scene ghosts_1 at fullscreen_bg
     with fade
@@ -45,6 +48,7 @@ label CH_A_06_bad_Tomb_of_the_Warriors_1:
     voice "audio/voice/a/06b/0_14_「お前は….mp3"
     extend "「お前は…本当に勇者なのか！？剣の輝きが、かつての勇者とは違う…！」\n"
     voice "audio/voice/a/06b/0_15_戦士たちの.mp3"
+    $ ctc_mode = "page"
     extend "戦士たちの目は次第に疑念に満ち、その視線は冷たくなっていく。\n"
 
     stop music
@@ -55,6 +59,7 @@ label CH_A_06_bad_Tomb_of_the_Warriors_1:
     voice "audio/voice/a/06b/0_17_怒りと失望.mp3"
     extend "怒りと失望に満ちた声が響き渡る。\n"
     voice "audio/voice/a/06b/0_18_戦士たちは.mp3"
+    $ ctc_mode = "page"
     extend "戦士たちは一斉に立ち上がり、その霊体が不気味に膨れ上がり始める。\n"
 
     voice "audio/voice/a/06b/0_19_「許すこと.mp3"
@@ -67,6 +72,7 @@ label CH_A_06_bad_Tomb_of_the_Warriors_1:
     voice "audio/voice/a/06b/0_22_あなたは剣.mp3"
     extend "あなたは剣を振りかざすが、力が抜けてまともに動かせない。\n"
     voice "audio/voice/a/06b/0_23_やがて、冷.mp3"
+    $ ctc_mode = "page"
     extend "やがて、冷たい霊魂に体を包まれ、意識が遠のいていく。\n"
 
     voice "audio/voice/a/06b/0_24_最後に見た.mp3"
@@ -77,7 +83,8 @@ label CH_A_06_bad_Tomb_of_the_Warriors_1:
     extend "あなたが選んだ道は、勇者の名を冒涜する者としての哀れな末路だった。\n"
     scene skeleton_bad at fullscreen_bg
     voice "audio/voice/ゲームオーバー.mp3"
-    extend "ゲームオーバー。"
+    $ ctc_mode = "page"
+    extend "ゲームオーバー。\n"
     scene black
     with Dissolve(1.0)
 
